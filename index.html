@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    form{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: azure;
+    border-radius: 10px;
+    padding: 20px;
+    }
+</style>
+<body>
+    <form>
+        <h3>Login user Account</h3>
+        <label>Enter User Name</label><br>
+        <input type="text" id="username"><br><br>
+        <label>Enter User password</label><br>
+        <input type="password" id="password"><br><br>
+        <button onclick="login()">login</button>
+    </form>
+
+    <script>
+        function login() {
+            var name = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            if (name === "user" && pass === "123") {
+                window.open('homepage.html');
+            } else {
+                alert("wrong");
+            }
+        }
+    </script>
+</body>
+
+</html>
